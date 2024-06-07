@@ -1,0 +1,41 @@
+ERROR - 2024-06-02 18:35:18 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_toko_sepatu' in D:\xampp\htdocs\app-penjualan\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\xampp\htdocs\app-penjualan\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_toko_sepatu', 3306, '', 0)
+#1 D:\xampp\htdocs\app-penjualan\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\app-penjualan\system\Database\Database.php(68): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\app-penjualan\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 D:\xampp\htdocs\app-penjualan\system\Database\Seeder.php(98): CodeIgniter\Database\Config::forge(NULL)
+#5 D:\xampp\htdocs\app-penjualan\system\Commands\Database\Seed.php(71): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#6 D:\xampp\htdocs\app-penjualan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#7 D:\xampp\htdocs\app-penjualan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#8 D:\xampp\htdocs\app-penjualan\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#9 D:\xampp\htdocs\app-penjualan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#10 D:\xampp\htdocs\app-penjualan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_toko_sepatu' in D:\xampp\htdocs\app-penjualan\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\xampp\htdocs\app-penjualan\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\app-penjualan\system\Database\Database.php(68): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\app-penjualan\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 D:\xampp\htdocs\app-penjualan\system\Database\Seeder.php(98): CodeIgniter\Database\Config::forge(NULL)
+#4 D:\xampp\htdocs\app-penjualan\system\Commands\Database\Seed.php(71): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#5 D:\xampp\htdocs\app-penjualan\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#6 D:\xampp\htdocs\app-penjualan\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#7 D:\xampp\htdocs\app-penjualan\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#8 D:\xampp\htdocs\app-penjualan\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 D:\xampp\htdocs\app-penjualan\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-06-02 18:35:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_toko_sepatu'
+[Method: CLI, Route: db:seed/User/Seeder]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\Database.php(68): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\Database\Seeder.php(98): CodeIgniter\Database\Config::forge(null)
+ 4 SYSTEMPATH\Commands\Database\Seed.php(71): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+ 5 SYSTEMPATH\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run([...])
+ 6 SYSTEMPATH\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 7 SYSTEMPATH\Boot.php(338): CodeIgniter\CLI\Console->run()
+ 8 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 9 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
